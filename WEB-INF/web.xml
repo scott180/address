@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 链接http://localhost:8080/Address/userList 
+  		修改 tomcat server.xml <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+  -->
+  
+  <!-- 用户列表 -->
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userList</servlet-name>
+    <servlet-class>com.sudy.servlet.UserList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userList</servlet-name>
+    <url-pattern>/userList</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- 城市列表，用于下拉框 -->
+ <servlet>
+    <servlet-name>cityList</servlet-name>
+    <servlet-class>com.sudy.servlet.CityList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cityList</servlet-name>
+    <url-pattern>/cityList</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- 新增、修改用户 -->
+   <servlet>
+    <servlet-name>updateUser</servlet-name>
+    <servlet-class>com.sudy.servlet.UpdateUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateUser</servlet-name>
+    <url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- 修改用户时查看用户详情 -->
+   <servlet>
+    <servlet-name>userDetail</servlet-name>
+    <servlet-class>com.sudy.servlet.UserDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userDetail</servlet-name>
+    <url-pattern>/userDetail</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 删除用户 -->
+   <servlet>
+    <servlet-name>deleteUser</servlet-name>
+    <servlet-class>com.sudy.servlet.DeleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteUser</servlet-name>
+    <url-pattern>/deleteUser</url-pattern>
+  </servlet-mapping>
+  
+  
+   <!-- 通讯录列表 -->
+   <servlet>
+    <servlet-name>address/addressList</servlet-name>
+    <servlet-class>com.sudy.servlet.address.AddressList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>address/addressList</servlet-name>
+    <url-pattern>/address/addressList</url-pattern>
+  </servlet-mapping>
+
+   <!-- 通讯录新增用户、修改用户-->
+   <servlet>
+    <servlet-name>address/updateUser</servlet-name>
+    <servlet-class>com.sudy.servlet.address.UpdateUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>address/updateUser</servlet-name>
+    <url-pattern>/address/updateUser</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 通讯录查看用户详情-->
+   <servlet>
+    <servlet-name>address/userDetail</servlet-name>
+    <servlet-class>com.sudy.servlet.address.UserDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>address/userDetail</servlet-name>
+    <url-pattern>/address/userDetail</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 通讯录删除用户-->
+   <servlet>
+    <servlet-name>address/deleteUser</servlet-name>
+    <servlet-class>com.sudy.servlet.address.DeleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>address/deleteUser</servlet-name>
+    <url-pattern>/address/deleteUser</url-pattern>
+  </servlet-mapping>
+
+</web-app>
